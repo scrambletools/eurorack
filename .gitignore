@@ -1,0 +1,18 @@
+*.bak*
+.history/
+__pycache__/
+
+# KiCad-generated / per-user churn
+eurorack-backups/
+*.kicad_prl
+*-drc.rpt
+*-erc.rpt
+*.lck
+
+# Board-level STEP exports
+/*.step
+/*.stp
+
+# Plasticity churn
+*_autosave.plasticity
+plasticity/

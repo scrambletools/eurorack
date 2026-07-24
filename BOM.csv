@@ -1,0 +1,15 @@
+Comment,Designator,Qty,MPN,Manufacturer,Footprint,LCSC Part #,JLCPCB Class,Mount,DNP,Unit Price USD,Notes
+Eurorack power header 2x5 shrouded IDC,J1,1,2.54-2*5P,BOOMELE,IDC box 2x5 P2.54mm,C5665,Extended,THT,,0.0801,Red-stripe (-12V) end = pins 1/2; mark on silk
+5V/1A buck module (7805 drop-in),U1,1,K7805-1000R3,YLPTEC,"SIP-3 (TSR-1 land, P2.54)",C2992391,Extended,THT,,2.04,Vin 8-36V; pin 1=Vin 2=GND 3=Vout
+Schottky reverse protection 40V 3A,D1,1,SS34,MDD,SMA (DO-214AC),C8678,Basic,SMT,,0.0352,
+22uF 25V X5R,"C1, C3",2,GRT21BR61E226ME13L,Murata,0805,C398931,Extended,SMT,,0.1657,JLC-basic Samsung equivalents out of stock 2026-07-23
+100nF 50V X7R,"C2, C4",2,CC0402KRX7R9BB104,Yageo,0402,C131394,Basic,SMT,,0.0097,Same part as hat BOM
+Ferrite bead 600R@100MHz 2A,FB1,1,MPZ2012S601AT000,TDK,0805,C21519,Basic,SMT,,0.0296,
+2.2k 1%,R1,1,0402WGF2201TCE,UNI-ROYAL,0402,C25879,Basic,SMT,,0.0011,Same part as hat BOM; power LED series R
+0R jumper,R2,1,0402WGF0000TCE,UNI-ROYAL,0402,C17168,Basic,SMT,,0.0011,Input attenuator series position; VERIFY C-number before order
+Input attenuator shunt,R3,1,,,0402,,,SMT,DNP,,Populate R2/R3 divider to pad hot eurorack levels (e.g. 100k/47k)
+Green LED 525nm,D2,1,KT-0805G,KENTO,0805,C2297,Basic,SMT,,0.0163,5V power indicator
+1x7 female socket 8.5mm stack,"J2, J3",2,PM254V-11-07-H85,XFCN,PinSocket 1x7 P2.54 TH,C2832270,Extended,THT,,0.079,Same part as hat J3/J4; mates carrier pins
+1x7 male header (snap from 1x40),"J4, J5",2,2.54-1*40P,BOOMELE,PinHeader 1x7 P2.54 TH,C2337,Extended,THT,,0.1319,One 40-pin strip yields both + J8
+1x4 male header,J8,1,B-2100S04P-A110,Ckmtw,PinHeader 1x4 P2.54 TH,C124378,Extended,THT,,0.0561,Audio wires to hat J1/J2 pads
+"3.5mm mono jack, horizontal, threaded","J6, J7",2,PJ-3410,XKB,"Horizontal THT, M7.7x0.75 plastic nose",C5146694,Extended,THT,,0.3483,Panel hole >=7.8mm; plastic nose keeps sleeve grounds split; BENCH-VERIFY tip/sleeve vs footprint pad map before fab
