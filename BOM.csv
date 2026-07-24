@@ -1,15 +1,15 @@
-Comment,Designator,Qty,MPN,Manufacturer,Footprint,LCSC Part #,JLCPCB Class,Mount,DNP,Unit Price USD,Notes
-Eurorack power header 2x5 shrouded IDC,J1,1,2.54-2*5P,BOOMELE,IDC box 2x5 P2.54mm,C5665,Extended,THT,,0.0801,Red-stripe (-12V) end = pins 1/2; mark on silk
-5V/1A buck module (7805 drop-in),U1,1,K7805-1000R3,YLPTEC,"SIP-3 (TSR-1 land, P2.54)",C2992391,Extended,THT,,2.04,Vin 8-36V; pin 1=Vin 2=GND 3=Vout
-Schottky reverse protection 40V 3A,D1,1,SS34,MDD,SMA (DO-214AC),C8678,Basic,SMT,,0.0352,
-22uF 25V X5R,"C1, C3",2,GRT21BR61E226ME13L,Murata,0805,C398931,Extended,SMT,,0.1657,JLC-basic Samsung equivalents out of stock 2026-07-23
-100nF 50V X7R,"C2, C4",2,CC0402KRX7R9BB104,Yageo,0402,C131394,Basic,SMT,,0.0097,Same part as hat BOM
-Ferrite bead 600R@100MHz 2A,FB1,1,MPZ2012S601AT000,TDK,0805,C21519,Basic,SMT,,0.0296,
-2.2k 1%,R1,1,0402WGF2201TCE,UNI-ROYAL,0402,C25879,Basic,SMT,,0.0011,Same part as hat BOM; power LED series R
-0R jumper,R2,1,RC0402JR-070RL,YAGEO,0402,C60485,Basic,SMT,,0.0049,Input attenuator series position (C17168 was out of stock 2026-07-23)
-Input attenuator shunt,R3,1,,,0402,,,SMT,DNP,,Populate R2/R3 divider to pad hot eurorack levels (e.g. 100k/47k)
-Green LED 525nm,D2,1,KT-0805G,KENTO,0805,C2297,Basic,SMT,,0.0163,5V power indicator
-1x7 female socket 8.5mm stack,"J2, J3",2,PM254V-11-07-H85,XFCN,PinSocket 1x7 P2.54 TH,C2832270,Extended,THT,,0.079,Same part as hat J3/J4; mates carrier pins
-1x7 male header (snap from 1x40),"J4, J5",2,2.54-1*40P,BOOMELE,PinHeader 1x7 P2.54 TH,C2337,Extended,THT,,0.1319,One 40-pin strip yields both + J8
-1x4 male header,J8,1,B-2100S04P-A110,Ckmtw,PinHeader 1x4 P2.54 TH,C124378,Extended,THT,,0.0561,Audio wires to hat J1/J2 pads
-"3.5mm mono jack, horizontal, threaded","J6, J7",2,PJ-3410,XKB,"Horizontal THT, M7.7x0.75 plastic nose",C5146694,Extended,THT,,0.3483,Panel hole >=7.8mm; plastic nose keeps sleeve grounds split; BENCH-VERIFY tip/sleeve vs footprint pad map before fab
+Comment,Designator,Qty,MPN,Manufacturer,Footprint,LCSC Part #,JLCPCB Class,Mount,DNP,Unit Price USD,Notes,Datasheet
+Eurorack power header 2x5 shrouded IDC,J1,1,2.54-2*5P,BOOMELE,IDC box 2x5 P2.54mm,C5665,Extended,THT,,0.0801,Red-stripe (-12V) end = pins 1/2; mark on silk,https://assets.lcsc.com/datasheet/szlcsc/Download-ISO9001-Certification.pdf
+5V/1A buck module (7805 drop-in),U1,1,K7805-1000R3,YLPTEC,"SIP-3 (TSR-1 land, P2.54)",C2992391,Extended,THT,,2.04,Vin 8-36V; pin 1=Vin 2=GND 3=Vout,https://datasheet.lcsc.com/datasheet/pdf/313b6b20c299036ba7ffc00b257b15b5.pdf?productCode=C2992391
+Schottky reverse protection 40V 3A,D1,1,SS34,MDD,SMA (DO-214AC),C8678,Basic,SMT,,0.0352,,https://datasheet.lcsc.com/datasheet/pdf/dfa1ff67dea875d0135103ba9ada713a.pdf?productCode=C8678
+22uF 25V X5R,"C1, C3",2,GRT21BR61E226ME13L,Murata,0805,C398931,Extended,SMT,,0.1657,JLC-basic Samsung equivalents out of stock 2026-07-23,https://datasheet.lcsc.com/datasheet/pdf/e6bf9871bf3c14261c20e97c8b0fc691.pdf?productCode=C398931
+100nF 50V X7R,"C2, C4",2,CC0402KRX7R9BB104,Yageo,0402,C131394,Basic,SMT,,0.0097,Same part as hat BOM,https://datasheet.lcsc.com/datasheet/pdf/23ccee80ee542e7cf156a772bb589942.pdf?productCode=C131394
+Ferrite bead 600R@100MHz 2A,FB1,1,MPZ2012S601AT000,TDK,0805,C21519,Basic,SMT,,0.0296,,https://datasheet.lcsc.com/datasheet/pdf/faf431921010bd6151d84a7da591b5d1.pdf?productCode=C21519
+2.2k 1%,R1,1,AC0402FR-072K2L,YAGEO,0402,C144773,Basic,SMT,,0.0057,Power LED series R (0402WGF2201TCE/C25879 went stock-0 2026-07-24; NOTE: hat BOM R20 uses C25879 too - check JLC stock at hat order time),https://datasheet.lcsc.com/datasheet/pdf/3511efb0564cb1711d9237ab09d6e97b.pdf?productCode=C144773
+0R jumper,R2,1,RC0402JR-070RL,YAGEO,0402,C60485,Basic,SMT,,0.0049,Input attenuator series position (C17168 was out of stock 2026-07-23),https://datasheet.lcsc.com/datasheet/pdf/b426be3ce22c6de3e0c3a2248e49159e.pdf?productCode=C60485
+Input attenuator shunt,R3,1,,,0402,,,SMT,DNP,,Populate R2/R3 divider to pad hot eurorack levels (e.g. 100k/47k),
+Green LED 525nm,D2,1,KT-0805G,KENTO,0805,C2297,Basic,SMT,,0.0163,5V power indicator,https://datasheet.lcsc.com/datasheet/pdf/de342fde3322df0797012cd7a04e2194.pdf?productCode=C2297
+1x7 female socket 8.5mm stack,"J2, J3",2,PM254V-11-07-H85,XFCN,PinSocket 1x7 P2.54 TH,C2832270,Extended,THT,,0.079,Same part as hat J3/J4; mates carrier pins,https://datasheet.lcsc.com/datasheet/pdf/5aa023c30ffb4f607882b69ea05af7aa.pdf?productCode=C2832270
+1x7 male header (snap from 1x40),"J4, J5",2,2.54-1*40P,BOOMELE,PinHeader 1x7 P2.54 TH,C2337,Extended,THT,,0.1319,One 40-pin strip yields both + J8,https://datasheet.lcsc.com/datasheet/pdf/d52c83a07830c4e9e9a614accc55f5cd.pdf?productCode=C2337
+1x4 male header,J8,1,B-2100S04P-A110,Ckmtw,PinHeader 1x4 P2.54 TH,C124378,Extended,THT,,0.0561,Audio wires to hat J1/J2 pads,https://datasheet.lcsc.com/datasheet/pdf/219f7e7eb5f34457895b2c164313179f.pdf?productCode=C124378
+"3.5mm mono jack, horizontal, threaded","J6, J7",2,PJ-3410,XKB,"Horizontal THT, M7.7x0.75 plastic nose",C5146694,Extended,THT,,0.3483,Panel hole >=7.8mm; plastic nose keeps sleeve grounds split; BENCH-VERIFY tip/sleeve vs footprint pad map before fab,https://datasheet.lcsc.com/datasheet/pdf/828fa49ea5e7f225aa21ffda61211ee1.pdf?productCode=C5146694
