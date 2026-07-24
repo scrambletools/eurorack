@@ -24,10 +24,10 @@ stack into a eurorack module. It sits **between the carrier and the hat**:
    carrier; J4/J5 male headers up to the hat): a full 7+7 pass-through,
    **cross-wired so the hat mounts rotated 180°** relative to its normal
    orientation (XLR pointing the other way).
-3. **Panel audio** (J6 in, J7 out, 3.5 mm mono horizontal threaded jacks):
-   a fully **isolated** circuit — no connection to power or the mezzanine —
-   that brings the jacks to header J8, from which wires run to the hat's
-   J1/J2 hand-solder pads.
+3. **Panel audio** (J6 in, J7 out, 3.5 mm mono threaded jacks, vertical
+   nose-up mount): a fully **isolated** circuit — no connection to power or
+   the mezzanine — that brings the jacks to header J8, from which wires run
+   to the hat's J1/J2 hand-solder pads.
 
 ## Mezzanine crossover map
 
@@ -70,14 +70,19 @@ the hat keeps these split. The jacks **must have plastic threaded noses**
 (Thonkiconn-style) so the metal faceplate doesn't short the two sleeves
 together; don't substitute metal-bushing jacks.
 
-**Jacks:** XKB **PJ-3410** (LCSC C5146694) — horizontal, PBT (plastic)
-threaded nose **M7.7 × 0.75**, so drill the faceplate **≥ 7.8 mm** (not the
-6 mm of a Thonkiconn). Footprint pads were taken from the LCSC/EasyEDA
-source footprint; the pad map (T = terminal 5 tip spring, S = terminal 4
-brass barrel, TN = terminal 2 NC throw, 3 = floating) should be
-**bench-verified with a meter on a sample** before ordering boards.
-Terminal 3 is intentionally unconnected — expect one benign "pad not in
-netlist" note per jack at F8.
+**Jacks:** XKB **PJ-3410** (LCSC C5146694) — a **vertical** PCB jack: the
+nose points straight up off the board (total ≈ 19.5 mm above the PCB:
+13 body + 2 flange + 4.5 thread), terminals exit the rear face down
+through the board. PBT (plastic) threaded nose **M7.7 × 0.75**, so drill
+the faceplate **≥ 7.8 mm** (not the 6 mm of a Thonkiconn).
+**Mechanical consequence:** the jack faces must point at the faceplate, so
+either the jack area of the board sits parallel to the panel, or the
+mounting arrangement otherwise presents the noses through it — TBD during
+layout. Footprint pads were taken from the LCSC/EasyEDA source footprint;
+the pad map (T = terminal 5 tip spring, S = terminal 4 brass barrel,
+TN = terminal 2 NC throw, 3 = floating) should be **bench-verified with a
+meter on a sample** before ordering boards. Terminal 3 is intentionally
+unconnected — expect one benign "pad not in netlist" note per jack at F8.
 
 ## Power header orientation
 
@@ -92,5 +97,5 @@ buck.
 - Layout notes: J2/J3 spacing must match the carrier's two 1×7 rows —
   **copy the exact J3/J4 placement from the hat layout** (rows are
   ~17.553 mm apart center-to-center, *not* on a shared 2.54 mm grid);
-  J4 above J2 and J5 above J3 at identical XY; jacks side-mounted on the
-  faceplate edge.
+  J4 above J2 and J5 above J3 at identical XY; jacks are vertical
+  (nose-up) — plan how their noses reach the faceplate before placing.
