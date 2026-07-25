@@ -48,16 +48,29 @@ pin order reversed; the routing below un-scrambles that:
 
 (PASS_B2/PASS_B4 are unused by the hat but passed through anyway.)
 
-## Audio wiring to the hat (J8 → hand-solder pads)
+## Audio to the hat (J8)
 
-| J8 pin | net | wire to | note |
+J8 (1×4 male) **direct-mates the hat's J7 socket** (1×4 female, 8.5 mm
+stacking — same series and stack height as the J2↔J4 / J3↔J5 mezzanine, so
+all three connectors seat together). On the hat: populate J7 + R27 (forces
+instrument mode), leave J1 off. Pin-for-pin when mated:
+
+| J8 pin | net | hat J7 pin / net | note |
 |---|---|---|---|
-| 1 | AIN_T | hat **J1 pad T** | input tip |
-| 2 | AIN_S | hat **J1 pad S** | input sleeve; **also jumper hat J1 R→S** (forces instrument mode) |
-| 3 | AOUT_T | hat **J2 pad T** | output tip (left channel) |
-| 4 | AOUT_S | hat **J2 pad TN** | output ground — **TN, not S** (S is the headset-mic line) |
+| 1 | AIN_T | 1 `GTIP` | input tip |
+| 2 | AIN_S | 2 `PGND` | input ground |
+| 3 | AOUT_S | 3 `AGND` | output ground |
+| 4 | AOUT_T | 4 `HP_L_OUT` | output tip (left channel) |
 
-Use shielded cable for all four runs; shield lands at this board's end only.
+Signals sit on the outer pins with **both grounds between them** — that
+ordering is deliberate (kills output→input crosstalk across the header);
+keep it if anything gets re-pinned. **Layout:** place J8 so it lands on the
+hat's J7 with all pin 1s consistently oriented under the 180° hat rotation —
+same rule as J4/J5.
+
+Fallback: the same J8 pins can still be hand-wired to the hat pads
+(AIN_T→J1 T, AIN_S→J1 S + R→S jumper, AOUT_T→J2 T, AOUT_S→J2 TN) with
+shielded cable, shield landed at this board's end only.
 
 **Levels:** eurorack signals swing ±5 V (10 Vpp) but the hat's instrument
 input runs from a 5 V rail — hot patches will clip. R2 (series, default 0 Ω)

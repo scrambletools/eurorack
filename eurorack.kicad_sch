@@ -2722,7 +2722,7 @@
 			)
 		)
 	)
-	(global_label "AOUT_S"
+	(global_label "AOUT_T"
 		(shape passive)
 		(at 163.576 137.414 180)
 		(effects
@@ -3272,7 +3272,7 @@
 			)
 		)
 	)
-	(global_label "AOUT_T"
+	(global_label "AOUT_S"
 		(shape passive)
 		(at 163.576 134.874 180)
 		(effects
@@ -4586,7 +4586,7 @@
 				)
 			)
 		)
-		(property "Value" "wires to hat J1/J2 pads"
+		(property "Value" "mates hat J7 (or wires to hat pads)"
 			(at 165.862 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
