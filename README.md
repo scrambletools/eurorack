@@ -72,6 +72,25 @@ Fallback: the same J8 pins can still be hand-wired to the hat pads
 (AIN_T→J1 T, AIN_S→J1 S + R→S jumper, AOUT_T→J2 T, AOUT_S→J2 TN) with
 shielded cable, shield landed at this board's end only.
 
+## Display pass-through (J9 → J10)
+
+The hat's **J6** display header (1 = GND/AGND, 2 = +3V3, 3 = SCL, 4 = SDA)
+plugs into **J9** (1×4 female, 8.5 mm H85) on this board; **J10** (same
+socket) presents the identical pinout for an I²C display (the usual
+GND/VCC/SCL/SDA order of SSD1306-style OLED modules — verify your display's
+order before plugging). J9→J10 is a 1:1 pass-through on dedicated `DISP_*`
+nets, deliberately **not** tied to this board's ground — the display's
+return flows through the hat's AGND like a directly-plugged display, so no
+ground loop is added.
+
+**Hat-side requirement:** for the stack, the hat's J6 male header must be
+fitted on the hat's **bottom** side (pins pointing down at this board) —
+JLC assembles it top-side by default, so eurorack builds should hand-fit J6
+(ask for it excluded from assembly, or rework). **Layout:** J9 must land
+directly under hat J6 with pin 1s consistently oriented under the 180° hat
+rotation — same rule as J8; J10 near the faceplate wherever the display
+mounts.
+
 **Levels:** eurorack signals swing ±5 V (10 Vpp) but the hat's instrument
 input runs from a 5 V rail — hot patches will clip. R2 (series, default 0 Ω)
 + R3 (shunt, DNP) form an optional input attenuator: populate e.g.

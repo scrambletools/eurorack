@@ -5552,6 +5552,308 @@
 			)
 		)
 	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 240.03 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9d0e3072-79b4-419b-aea0-cb1bfba60f3a")
+		(property "Reference" "J9"
+			(at 242.57 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "from hat J6 (display I2C)"
+			(at 242.57 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
+			(at 240.03 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7912db05a9479e06d287e74aeb027dc2.pdf?productCode=C541851"
+			(at 240.03 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" ""
+			(at 240.03 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1"
+			(uuid "29bf84b8-524b-47c3-873d-36b71f6bbc39")
+		)
+		(pin "2"
+			(uuid "0b380ed2-2511-4a0a-804d-670e929c4116")
+		)
+		(pin "3"
+			(uuid "b540f27f-208f-49af-9315-4671a7b0e689")
+		)
+		(pin "4"
+			(uuid "34cd0a7c-0465-4ce7-be57-a8c33564c123")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 240.03 149.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cca58875-f475-45db-b82c-942dd6d98014")
+		(property "Reference" "J10"
+			(at 242.57 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "display socket"
+			(at 242.57 154.94000000000003 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
+			(at 240.03 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7912db05a9479e06d287e74aeb027dc2.pdf?productCode=C541851"
+			(at 240.03 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" ""
+			(at 240.03 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1"
+			(uuid "3bf547e4-3888-466e-b469-2271bc842608")
+		)
+		(pin "2"
+			(uuid "5d33bd76-4405-4137-a6e0-dc992e4b5892")
+		)
+		(pin "3"
+			(uuid "1f9f7581-49f3-4ea9-bb67-d4691819f979")
+		)
+		(pin "4"
+			(uuid "de1be1d8-ad34-420b-8a50-4e88c79a5cae")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "DISP_GND"
+		(shape passive)
+		(at 234.95 102.87 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "acab44b9-a108-4048-a886-1090aa237da9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 234.95 102.87 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "DISP_3V3"
+		(shape passive)
+		(at 234.95 105.41 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ee6273d2-e4b4-4cda-a03f-e7bcb5cb577d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 234.95 105.41 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "DISP_SCL"
+		(shape passive)
+		(at 234.95 107.95 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7a33c333-05e0-4c74-868b-6d9169b57ed7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 234.95 107.95 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "DISP_SDA"
+		(shape passive)
+		(at 234.95 110.49 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "da34c538-6a73-45d0-8ec8-0b888d24051e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 234.95 110.49 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "DISP_GND"
+		(shape passive)
+		(at 234.95 147.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2ee3543a-3bc2-427b-b1ca-1b81ce38acd1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 234.95 147.32 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "DISP_3V3"
+		(shape passive)
+		(at 234.95 149.86 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "03b7fe79-e333-4319-8434-aa3d7b97e694")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 234.95 149.86 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "DISP_SCL"
+		(shape passive)
+		(at 234.95 152.4 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "925adfa6-7c54-4e32-8d9e-1981c839dc65")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 234.95 152.4 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "DISP_SDA"
+		(shape passive)
+		(at 234.95 154.94 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8415d3b0-9bd7-4ff6-9afa-a70357a45417")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 234.95 154.94 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
