@@ -33,10 +33,14 @@ I/O, and a display socket, with no changes to either board.
 
 ## Usage notes
 
-- **Do not connect the carrier's USB-C while the module powers it from
-  the rack** — the buck's 5 V is injected into the mezzanine with no
-  power mux in that path. Power the rack side down for USB flashing, or
-  flash over the network.
+- **USB-C works while the module is rack-powered** (bench-verified): the
+  buck injects on the carrier's pre-mux node (`VCC1_5V`, the same one the
+  PoE module drives), so the carrier's own power mux disconnects USB
+  VBUS automatically and only USB *data* + the UART chip stay active.
+  One caveat: with the **rack off** and USB still plugged, USB back-feeds
+  the buck's output — tolerated in practice but unspecified for the
+  K7805; unplug one or the other when parked, or add an ideal diode
+  (LM66100, LCSC C2869734) in the buck's output if you want it bulletproof.
 - **Phantom power doesn't exist in the rack** (no PoE), so the hat's XLR
   condenser path is out of scope here — the module's jacks use the
   instrument input and line output instead.
@@ -64,7 +68,10 @@ the routing un-scrambles it:
 | 6 | MCLK | J5.2 | 6 | SCL | J4.2 |
 | 7 | DET | J5.1 | 7 | SDA | J4.1 |
 
-(PASS_B2/PASS_B4 are unused by the hat but passed through anyway.)
+PASS_B2/PASS_B4 are unused by the hat but bench-tracing identified them
+on the carrier: **PASS_B2 = the carrier's main 5 V rail** (downstream of
+its ORing diode — a legitimate power tap) and **PASS_B4 = the carrier's
+3V3_EN** — **never ground it**, that would kill the carrier's 3.3 V rail.
 
 ## Audio to the hat (J8)
 
