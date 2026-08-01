@@ -1,0 +1,6 @@
+Comment,Designator,Footprint,JLCPCB Part #（optional）
+Schottky reverse protection 40V 3A,D1,SMA (DO-214AC),C8678
+22uF 25V X5R,"C1, C3",0805,C398931
+100nF 50V X7R,"C2, C4",0402,C131394
+Ferrite bead 600R@100MHz 2A,FB1,0805,C21519
+0R jumper,R2,0402,C60485
