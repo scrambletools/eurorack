@@ -60,27 +60,27 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.5,
+          "min_clearance": 0.25,
           "min_island_area": 10.0,
-          "min_thickness": 0.25,
+          "min_thickness": 0.2,
           "pad_connection": 1,
           "remove_islands": 0,
-          "thermal_relief_gap": 0.5,
-          "thermal_relief_spoke_width": 0.5
+          "thermal_relief_gap": 0.3,
+          "thermal_relief_spoke_width": 0.4
         }
       },
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
-          "courtyards_overlap|105795000|51845000|32f31480-e62f-4164-8b40-f4c42f5c1ee6|3aaaee12-9c15-4980-b684-0f6317bcaf6c",
-          ""
-        ],
-        [
-          "courtyards_overlap|105795000|57095000|319d8935-1348-462b-87c9-c0acc6c6d345|db6c025a-baf7-4752-88b7-a1d2fe2a2eec",
-          ""
-        ],
-        [
           "courtyards_overlap|148834717|61825000|1808f337-90aa-4327-ba72-a134047d2758|893ded0b-c698-4f35-b92e-d589d27611c3",
+          ""
+        ],
+        [
+          "courtyards_overlap|85605000|65345000|319d8935-1348-462b-87c9-c0acc6c6d345|db6c025a-baf7-4752-88b7-a1d2fe2a2eec",
+          ""
+        ],
+        [
+          "courtyards_overlap|98275000|65345000|32f31480-e62f-4164-8b40-f4c42f5c1ee6|3aaaee12-9c15-4980-b684-0f6317bcaf6c",
           ""
         ]
       ],
