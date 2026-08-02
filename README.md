@@ -19,14 +19,17 @@ I/O, and a display socket, with no changes to either board.
 1. **Eurorack power** (J1, 2×5 shrouded IDC): +12 V from the bus through
    reverse-polarity protection (D1) and a ferrite (FB1) into a
    K7805-1000R3 buck (U1) → **5 V** injected into the mezzanine, powering
-   the carrier and the hat. −12 V is brought onto the board but unused.
+   the carrier and the hat. −12 V feeds the output amplifier (D2 + FB2
+   conditioned).
 2. **Hat interposer** (J2/J3 bottom-side sockets down to the carrier;
    J4/J5 headers up to the hat): a full 7+7 pass-through, cross-wired so
    the hat mounts 180° opposite its normal orientation.
-3. **Panel audio** (J6 in, J7 out — 3.5 mm mono threaded jacks): a fully
-   **isolated** circuit running to header J8, which direct-mates the hat's
-   J7 socket — instrument-level mono input and line output at the
-   faceplate, no wiring.
+3. **Panel audio** (J6 in, J7 out — 3.5 mm mono threaded jacks) to header
+   J8, which direct-mates the hat's J7 socket. **Eurorack-levelled both
+   ways**: the input is padded −11.5 dB (R2/R3 100k/39k — ±5 V modular
+   swings land inside the hat's codec range) and the output is amplified
+   ×4.9 by a TL072 on the rack's ±12 V rails (hat's ~2 Vpp → ~10 Vpp
+   modular level, 1 kΩ series out).
 4. **Display socket** (J10): GND / 3V3 / SCL / SDA for an SSD1306-style
    I²C OLED, powered and driven directly from this board — the hat's J6
    header is not needed.
@@ -46,11 +49,12 @@ I/O, and a display socket, with no changes to either board.
   instrument input and line output instead.
 - **Hat build for eurorack:** populate **J7 + R27**; leave **J1 (combo
   jack), SW1 and J6 unpopulated**.
-- **Levels:** eurorack signals swing ±5 V but the hat's instrument input
-  runs from a 5 V rail — hot patches will clip. R2 (series, default 0 Ω)
-  + R3 (shunt, DNP) form an optional input attenuator: e.g. R2 = 100k /
-  R3 = 47k for ≈ −10 dB into the hat's ~500 kΩ input. The output (hat
-  DAC, ~2 Vpp max) is simply a bit quiet by modular standards.
+- **Levels:** handled on-board. Input: R2/R3 (100k/39k, ≈ −11.5 dB) pads
+  ±5 V modular signals into the hat's codec range. Output: U2 (TL072,
+  ±12 V) amplifies the hat's ~2 Vpp to ~10 Vpp modular level with a 1 kΩ
+  series output. For non-modular sources into J6 (guitar level), swap
+  R2 to 0 Ω and leave R3 off — that restores the hat's native
+  instrument-level path.
 
 ## Mezzanine crossover map
 
@@ -90,10 +94,11 @@ crosstalk guarding; keep the order if anything gets re-pinned. Fallback:
 the same pins can be hand-wired to the hat's J1/J2 pads with shielded
 cable (see the hat README).
 
-**Grounding:** the input sleeve ties to hat PGND, the output sleeve to hat
-AGND — the hat keeps those domains split, so this board never joins AIN_S
-and AOUT_S, and the audio circuit has no connection to the module's own
-power or ground. The jacks **must have plastic threaded noses** so the
+**Grounding:** the input side stays fully isolated (sleeve → hat PGND,
+passive divider only). The output side is driven by the ±12 V amplifier,
+so its return (AOUT_S / hat AGND) is bonded to module GND at **one
+deliberate point** (net-tie NT1 beside the amp) — AIN_S and AOUT_S are
+still never joined to each other. The jacks **must have plastic threaded noses** so the
 metal faceplate doesn't short the two sleeves together — don't substitute
 metal-bushing jacks.
 
@@ -137,7 +142,10 @@ blocks a reversed ribbon from applying −12 V to the buck.
 
 ## Status
 
-Schematic + BOM final; PCB placed, fully routed, DRC clean; audio
-coupling audit passed. Before ordering: bench-verify the PJ-3410 pad map,
-and caliper-check the carrier's mezzanine row spacing against J2/J3
-(designed at 17.75 mm; the fit-proven hat uses 17.577 mm).
+**Schematic is ahead of the PCB**: the eurorack I/O stage (U2 amp, R4–R7,
+D2, FB2, C5–C7, NT1 — ten new footprints) needs placement and routing;
+regenerate fab/docs afterwards. Suggested placement: amp + rail parts in
+the pour pocket near the buck; NT1 adjacent to U2; keep the amp output
+run paired with AOUT_S to the jack. Before ordering: bench-verify the
+PJ-3410 pad map, and caliper-check the carrier's mezzanine row spacing
+against J2/J3 (designed 17.75 mm; the fit-proven hat uses 17.577 mm).

@@ -10,4 +10,6 @@
 	(lib (name "Connector_IDC")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Connector_IDC.pretty")(options "")(descr "KiCad standard"))
 	(lib (name "Connector_PinHeader_2.54mm")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Connector_PinHeader_2.54mm.pretty")(options "")(descr "KiCad standard"))
 	(lib (name "Connector_PinSocket_2.54mm")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Connector_PinSocket_2.54mm.pretty")(options "")(descr "KiCad standard"))
+	(lib (name "Package_SO")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Package_SO.pretty")(options "")(descr "KiCad standard"))
+	(lib (name "NetTie")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/NetTie.pretty")(options "")(descr "KiCad standard"))
 )

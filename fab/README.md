@@ -10,15 +10,15 @@ Production files for **JLCPCB**. 2-layer board, ~84.7 × 30 mm.
 
 ## Assembly split
 
-- **JLCPCB SMT (optional):** `C1–C4`, `D1`, `FB1`, `R2` — 5 BOM lines, 7
-  placements. Cheap enough to simply hand-solder instead if preferred.
-  If using assembly, **verify D1 (SMA diode) orientation in the preview** —
-  no validated rotation correction exists for this board.
+- **JLCPCB SMT (optional):** `C1–C7`, `D1/D2`, `FB1/FB2`, `R2–R7`, `U2`,
+  `NT1` — 19 placements. If using assembly, **verify orientation of D1/D2
+  (SMA) and U2 (SOIC-8 pin 1) in the preview** — no validated rotation
+  corrections exist for this board.
 - **Hand-solder (all THT):** `J1` (power IDC), `J2/J3` (carrier sockets),
   `J4/J5` (hat headers), `J6/J7` (panel jacks), `J8` (audio header),
   `J10` (display socket), `U1` (K7805 buck module).
-- **DNP:** `R3` (input attenuator shunt — populate with R2 swapped to a
-  series value only if attenuating eurorack levels; see root README).
+- **DNP:** none. (R2/R3 = 100k/39k eurorack input pad; for guitar-level
+  sources instead fit R2 = 0 Ω and omit R3 — see root README.)
 
 ## Before ordering
 

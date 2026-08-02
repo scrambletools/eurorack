@@ -12,8 +12,8 @@ DNP). Every through-hole part — all connectors, both jacks, and the K7805
 module — is hand-soldered, so THT parts are dropped from the assembly BOM
 and CPL automatically via their `through_hole` footprint attribute.
 
-    Verify D1 (SMA diode, polarized) in JLCPCB's assembly preview — its
-    rotation carries no validated correction, unlike the hat's parts.
+    Verify the polarized parts in JLCPCB's assembly preview — D1/D2 (SMA
+    diodes) and U2 (SOIC-8 pin 1) carry no validated rotation corrections.
 
 Usage:   python3 tools/gen_fab.py
 Needs:   kicad-cli on PATH; openpyxl for the .xlsx BOM (optional).
@@ -138,7 +138,7 @@ def gen_cpl():
     with open(os.path.join(FAB, f"{BOARD}-CPL.csv"), "w", newline="") as f:
         csv.writer(f, lineterminator="\r\n").writerows(out)
     print(f"  {BOARD}-CPL.csv  ({len(out)-1} placed; excluded DNP/THT {sorted(excluded)})")
-    print("  no validated rotation corrections on this board -> verify D1 (SMA) in the preview")
+    print("  no validated rotation corrections -> verify D1/D2 (SMA) and U2 (SOIC-8) in the preview")
 
 
 if __name__ == "__main__":

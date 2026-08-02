@@ -9,6 +9,268 @@
 		(comment 1 "sits between ESP32-P4 carrier and the scramble_hat (hat rotated 180deg)")
 	)
 	(lib_symbols
+		(symbol "Amplifier_Operational:TL072"
+			(pin_names
+				(offset 0.127)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TL072"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8/SOIC-8"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "dual opamp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TL072_1_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TL072_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TL072_3_1"
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector_Audio:AudioJack2_SwitchT"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1773,6 +2035,148 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:NetTie_2"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "NT"
+				(at 0 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "NetTie_2"
+				(at 0 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Net tie, 2 pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "net tie short"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Net*Tie*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "NetTie_2_0_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "NetTie_2_1_1"
+				(pin passive line
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -2037,9 +2441,239 @@
 		(at 224.536 134.874)
 		(uuid "9330b5aa-3fc7-41f1-bd94-cdd4da88d356")
 	)
+	(wire
+		(pts
+			(xy 246.126 31.75) (xy 261.874 31.496)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "060fefb6-716f-4361-bab5-9074a62d44fa")
+	)
+	(wire
+		(pts
+			(xy 225.044 22.86) (xy 219.71 22.606)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b174775-305f-401c-beea-d2b83485579e")
+	)
+	(wire
+		(pts
+			(xy 224.028 68.834) (xy 219.583 68.961)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c29829e-d934-4674-8b40-e98ccbc38234")
+	)
+	(wire
+		(pts
+			(xy 238.252 59.182) (xy 248.285 59.309)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c40441b-bb8a-4a2f-83b6-c5e23958ce84")
+	)
+	(wire
+		(pts
+			(xy 186.944 151.638) (xy 202.946 151.638)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49df8c38-4ee4-42b4-85da-e04f8b8df221")
+	)
+	(wire
+		(pts
+			(xy 223.266 50.038) (xy 219.075 50.165)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ed120e1-d498-4037-a82a-8200905d25ec")
+	)
+	(wire
+		(pts
+			(xy 223.012 59.182) (xy 219.329 59.309)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50ebe2bc-055f-4373-8b6d-773bd8739758")
+	)
+	(wire
+		(pts
+			(xy 200.406 59.182) (xy 211.709 59.309)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54e074f6-4563-4865-8ae8-113804330388")
+	)
+	(wire
+		(pts
+			(xy 264.16 72.39) (xy 258.826 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "574fac5b-c4e7-4eb0-bdf2-b7331ff366c1")
+	)
+	(wire
+		(pts
+			(xy 199.898 30.988) (xy 211.963 31.115)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61784f06-9a31-4054-9b27-96edd1ef8128")
+	)
+	(wire
+		(pts
+			(xy 199.898 22.606) (xy 212.09 22.606)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63358d9d-ef46-4656-95d9-d83835dd017d")
+	)
+	(wire
+		(pts
+			(xy 262.128 99.822) (xy 259.588 99.822)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "726ddf2b-6b68-426d-837e-192abc851b2a")
+	)
+	(wire
+		(pts
+			(xy 257.302 119.38) (xy 264.16 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7419ad71-4a35-4623-9e4f-8dd5df401aa7")
+	)
+	(wire
+		(pts
+			(xy 227.076 40.64) (xy 219.329 40.513)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "790de206-0b15-4fae-9355-68a3af0f6faa")
+	)
+	(wire
+		(pts
+			(xy 199.898 50.292) (xy 211.455 50.165)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a549f6e0-ca17-4b86-ad0c-6565ad377cb6")
+	)
+	(wire
+		(pts
+			(xy 201.168 68.834) (xy 211.963 68.961)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5883e96-f14d-4ee5-aabb-a6e408f0507a")
+	)
+	(wire
+		(pts
+			(xy 224.282 151.638) (xy 218.186 151.638)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd46d069-866a-495d-b57f-d654f1357934")
+	)
+	(wire
+		(pts
+			(xy 271.272 46.99) (xy 265.43 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf7f0d41-6ca7-4a50-93ab-d49a0ba1df42")
+	)
+	(wire
+		(pts
+			(xy 242.57 46.99) (xy 257.81 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da309561-463d-44b7-ae28-a478dcf21fd0")
+	)
+	(wire
+		(pts
+			(xy 260.858 59.182) (xy 255.905 59.309)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e20d2a47-ecbf-4dab-8375-5fe92cf9227d")
+	)
+	(wire
+		(pts
+			(xy 225.044 30.988) (xy 219.583 31.115)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e68aff0c-6c43-4d35-ba9c-9ac90a1b523a")
+	)
+	(wire
+		(pts
+			(xy 247.396 72.39) (xy 251.206 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f08c3cae-34a9-4bb1-8c4c-8f8e0a7014ec")
+	)
+	(wire
+		(pts
+			(xy 197.104 40.64) (xy 211.709 40.513)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8f6bd87-8040-46e4-8361-c54d10b8a710")
+	)
 	(global_label "+3V3"
 		(shape passive)
-		(at 250.19 99.568 180)
+		(at 253.492 149.352 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2048,7 +2682,28 @@
 		)
 		(uuid "03b7fe79-e333-4319-8434-aa3d7b97e694")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 250.19 99.568 180)
+			(at 253.492 149.352 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "-12V_F"
+		(shape passive)
+		(at 246.126 31.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0710ccc7-fac8-4a65-85c2-82005881f0db")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 246.126 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2125,6 +2780,28 @@
 			)
 		)
 	)
+	(global_label "AOUT_S"
+		(shape passive)
+		(at 182.88 74.93 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "117c1630-6bff-46bc-befd-b825a7182fa9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 182.88 74.93 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "DSDIN"
 		(shape passive)
 		(at 208.534 101.6 180)
@@ -2147,6 +2824,48 @@
 			)
 		)
 	)
+	(global_label "AOUT_FB"
+		(shape passive)
+		(at 225.044 22.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "17362619-a018-4ff0-b441-3f62ffbb3b9d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 225.044 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "+12V_F"
+		(shape passive)
+		(at 224.282 151.638 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1b4a3cf1-a5a2-48d9-813f-1f89f2f833be")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 224.282 151.638 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "GND"
 		(shape passive)
 		(at 75.946 99.06 180)
@@ -2159,6 +2878,27 @@
 		(uuid "1e89bfb2-47bd-4629-87c1-6f46b3438874")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 75.946 99.06 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "-12V_F"
+		(shape passive)
+		(at 242.57 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2637b602-effa-48a0-9f43-a04741d5ef55")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 242.57 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2259,7 +2999,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 250.19 97.028 180)
+		(at 253.492 146.812 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2268,7 +3008,7 @@
 		)
 		(uuid "2ee3543a-3bc2-427b-b1ca-1b81ce38acd1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 250.19 97.028 180)
+			(at 253.492 146.812 180)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2313,6 +3053,27 @@
 		(uuid "32ae5d4a-875a-499f-915d-9f9f361ed58f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 65.786 58.42 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "AOUT_T"
+		(shape passive)
+		(at 199.898 50.292 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3ad76bbc-2b0e-474e-99fa-ce2dc95439f1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 199.898 50.292 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2433,6 +3194,27 @@
 			)
 		)
 	)
+	(global_label "GND"
+		(shape passive)
+		(at 200.406 59.182 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "44fbcd59-86a0-4e6f-ba4e-49e906f7e9e1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 200.406 59.182 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "LRCK"
 		(shape passive)
 		(at 208.534 106.68 180)
@@ -2499,6 +3281,27 @@
 			)
 		)
 	)
+	(global_label "GND"
+		(shape passive)
+		(at 201.168 68.834 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "504bc263-5cbc-4578-b21e-fc68678e9ab0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 201.168 68.834 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "+12V_P"
 		(shape passive)
 		(at 92.71 33.274 180)
@@ -2521,7 +3324,7 @@
 			)
 		)
 	)
-	(global_label "AOUT_T"
+	(global_label "AOUT_HAT"
 		(shape passive)
 		(at 163.576 137.414 180)
 		(effects
@@ -2589,7 +3392,7 @@
 	)
 	(global_label "+5V"
 		(shape passive)
-		(at 181.356 46.99 90)
+		(at 162.052 53.34 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2598,7 +3401,7 @@
 		)
 		(uuid "57d949f0-9a6f-4fb7-a45d-62c0d5f84761")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 181.356 46.99 90)
+			(at 162.052 53.34 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2665,6 +3468,50 @@
 		(uuid "642fb5be-082b-4dd0-a1bf-cc40230c7997")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 100.33 33.274 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "AOUT_HAT"
+		(shape passive)
+		(at 244.348 97.282 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "66ee46f5-e3c7-4e16-997e-33fc5bc43198")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 244.348 97.282 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 187.96 74.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6a7a9521-43a2-4abc-8912-b6c8f06173f9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 187.96 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2851,6 +3698,28 @@
 			)
 		)
 	)
+	(global_label "-12V_P"
+		(shape passive)
+		(at 264.16 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7d4c3f15-ece9-49ae-b246-202f58601476")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 264.16 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "MCLK"
 		(shape passive)
 		(at 208.534 96.52 180)
@@ -2873,9 +3742,30 @@
 			)
 		)
 	)
+	(global_label "-12V_F"
+		(shape passive)
+		(at 224.028 68.834 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "80956d8b-627a-4cbd-804d-26f034a9597e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 224.028 68.834 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "SDA"
 		(shape passive)
-		(at 250.19 104.648 180)
+		(at 253.492 154.432 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2884,7 +3774,49 @@
 		)
 		(uuid "8415d3b0-9bd7-4ff6-9afa-a70357a45417")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 250.19 104.648 180)
+			(at 253.492 154.432 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "AOUT_HAT"
+		(shape passive)
+		(at 225.044 30.988 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "89e5a209-1a82-4f4c-8123-e13904688bfc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 225.044 30.988 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "-12V_F"
+		(shape passive)
+		(at 186.944 151.638 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8b852b07-d899-4b72-b5ad-06b61dcd0dd9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 186.944 151.638 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2917,9 +3849,30 @@
 			)
 		)
 	)
+	(global_label "AOUT_AMP"
+		(shape passive)
+		(at 223.266 50.038 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "909c3fa0-3154-4192-8b19-eddadd9bafa1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 223.266 50.038 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "SCL"
 		(shape passive)
-		(at 250.19 102.108 180)
+		(at 253.492 151.892 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2928,7 +3881,7 @@
 		)
 		(uuid "925adfa6-7c54-4e32-8d9e-1981c839dc65")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 250.19 102.108 180)
+			(at 253.492 151.892 180)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2983,6 +3936,70 @@
 			)
 		)
 	)
+	(global_label "AOUT_FB"
+		(shape passive)
+		(at 227.076 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "94af0db6-1cb1-4ccd-99cc-0412955eaeec")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 227.076 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "U2B_FB"
+		(shape passive)
+		(at 242.062 121.92 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "95b9b8e5-2884-4f2b-9d43-561364889d22")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 242.062 121.92 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 238.252 59.182 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "9765b487-b214-400b-b0fa-827a2a032499")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 238.252 59.182 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "AIN_JACK"
 		(shape passive)
 		(at 106.426 137.16 90)
@@ -3027,6 +4044,28 @@
 			)
 		)
 	)
+	(global_label "-12V"
+		(shape passive)
+		(at 247.396 72.39 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "99ae5520-74ac-4561-90ed-c79379ba9195")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 247.396 72.39 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "MCLK"
 		(shape passive)
 		(at 75.946 106.68 180)
@@ -3061,6 +4100,70 @@
 		(uuid "a4cf22f5-5396-44dc-b55b-f92b31ca4693")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 163.576 129.794 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "U2B_FB"
+		(shape passive)
+		(at 264.16 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a6a8ee78-6eb8-4b89-bab9-b005aa068da9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 264.16 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "-12V_F"
+		(shape passive)
+		(at 223.012 59.182 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a87fa2b4-595b-4650-b441-20147dde43a8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 223.012 59.182 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 199.898 30.988 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a90ae035-41bc-4ef1-a8ac-e4153cc60591")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 199.898 30.988 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3181,6 +4284,28 @@
 			)
 		)
 	)
+	(global_label "GND"
+		(shape passive)
+		(at 242.062 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b8c2e40d-5dc4-41ef-8e7c-d6649c06b639")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 242.062 116.84 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "PASS_B2"
 		(shape passive)
 		(at 176.276 106.68 180)
@@ -3203,6 +4328,27 @@
 			)
 		)
 	)
+	(global_label "AOUT_AMP"
+		(shape passive)
+		(at 197.104 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "bf634d95-4d70-44e9-94dd-7bb32c0cea12")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 197.104 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "+12V_F"
 		(shape passive)
 		(at 153.162 28.448 180)
@@ -3215,6 +4361,27 @@
 		(uuid "c06e2585-b0dd-4847-96ab-e996fad78dba")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 153.162 28.448 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "+12V_F"
+		(shape passive)
+		(at 260.858 59.182 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c19983a6-be39-4da5-9be6-73b9e725ec74")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 260.858 59.182 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3359,7 +4526,7 @@
 	)
 	(global_label "+5V"
 		(shape passive)
-		(at 191.516 46.99 90)
+		(at 172.212 53.34 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3368,7 +4535,29 @@
 		)
 		(uuid "d630c155-b3f0-4efa-9845-c34c37161807")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.516 46.99 90)
+			(at 172.212 53.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "AOUT_AMP"
+		(shape passive)
+		(at 262.128 99.822 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d671c662-6b45-495b-9631-d76c01eb4695")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 262.128 99.822 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3381,7 +4570,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 181.356 54.61 270)
+		(at 162.052 60.96 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3390,7 +4579,7 @@
 		)
 		(uuid "d69b6133-7636-4a88-80a4-0bb78780ffbf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 181.356 54.61 270)
+			(at 162.052 60.96 270)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3403,7 +4592,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 191.516 54.61 270)
+		(at 172.212 60.96 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3412,7 +4601,7 @@
 		)
 		(uuid "d8564e1e-b88f-4e12-a89b-571ef9f30eb5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.516 54.61 270)
+			(at 172.212 60.96 270)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3435,6 +4624,28 @@
 		(uuid "dc86a40b-fe1e-4d8a-a050-335332fd6eaf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 65.786 60.96 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "AOUT_FB"
+		(shape passive)
+		(at 244.348 102.362 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ddb10b16-e084-427f-abf3-54df05d24c01")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 244.348 102.362 180)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3479,6 +4690,27 @@
 		(uuid "e3dccc0c-8a9a-4325-944d-bb5cadd0af96")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 208.534 109.22 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 199.898 22.606 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e71aac25-7be8-4d40-a955-9e3597d5b39f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 199.898 22.606 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3555,6 +4787,27 @@
 			)
 		)
 	)
+	(global_label "-12V_P"
+		(shape passive)
+		(at 271.272 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f8867e3a-08fd-4404-88fa-a1f634c12b0a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 271.272 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "GND"
 		(shape passive)
 		(at 78.486 58.42 0)
@@ -3595,6 +4848,161 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 261.874 31.496 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "026940e3-48c3-4177-a066-dd71ecb9a257")
+		(property "Reference" "#FLG03"
+			(at 260.858 28.448 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 262.128 35.306 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 261.874 34.036 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 261.874 34.036 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 261.874 34.036 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9c0818bd-4796-4f23-a945-88681a2186f0")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 215.519 59.309 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0f43a4d7-e494-4b7b-a526-27cd2d8dbe14")
+		(property "Reference" "C7"
+			(at 222.519 61.849 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "22uF 25V"
+			(at 212.598 59.436 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 215.519 61.849 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/e6bf9871bf3c14261c20e97c8b0fc691.pdf?productCode=C398931"
+			(at 215.519 61.849 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-12V bulk"
+			(at 215.519 61.849 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1128de4a-9472-4af4-9cde-1d64ff1b49e9")
+		)
+		(pin "2"
+			(uuid "b6e43c37-4500-4c4c-83a5-b3dcd2c7c7bd")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "C7")
+					(unit 1)
 				)
 			)
 		)
@@ -3758,6 +5166,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 215.9 22.606 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "24fdc0e2-8f9e-4808-ac80-8caa8b4c9113")
+		(property "Reference" "R4"
+			(at 222.9 25.146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 208.9 25.146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 215.9 25.146 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C60490.html"
+			(at 215.9 25.146 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "output amp gain set"
+			(at 215.9 25.146 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "94c2d329-ef0e-400b-9b4c-d0ebdea356af")
+		)
+		(pin "2"
+			(uuid "f8c699fb-9369-4e7f-b417-54d5967819a9")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
 		(at 70.866 55.88 0)
 		(unit 1)
@@ -3855,6 +5342,103 @@
 			(project "eurorack"
 				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:TL072")
+		(at 251.968 99.822 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3b284bd6-91fd-4250-ab37-34940945c738")
+		(property "Reference" "U2"
+			(at 254.508 92.822 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TL072"
+			(at 254.508 106.822 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 254.508 99.822 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C6961.html"
+			(at 254.508 99.822 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Eurorack output amp x4.9 (+-12V)"
+			(at 254.508 99.822 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "470d64a3-4f17-40b1-9067-28778d322b1f")
+		)
+		(pin "2"
+			(uuid "88e7db0f-1805-47c4-9d2c-95bbaf12ff91")
+		)
+		(pin "3"
+			(uuid "9c6200ef-f81e-42e1-82cb-ad8710e6e423")
+		)
+		(pin "5"
+			(uuid "5bee3c03-a925-4667-85fb-5cb5b861175a")
+		)
+		(pin "6"
+			(uuid "de8be9d4-21c9-4be3-8f4a-ccf1056b850e")
+		)
+		(pin "7"
+			(uuid "1656ee3a-c2d0-4eb1-9c8a-2e22b7129a25")
+		)
+		(pin "4"
+			(uuid "904e48b8-9a9b-4f7e-9eec-dc355eb0c2dd")
+		)
+		(pin "8"
+			(uuid "1db6fd91-2076-476c-89a3-b3bccf47b744")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -4128,6 +5712,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:NetTie_2")
+		(at 185.42 74.93 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5c0c1f6a-6d8d-406b-8ee1-31c533c40556")
+		(property "Reference" "NT1"
+			(at 187.96 67.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NetTie_2"
+			(at 187.96 81.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
+			(at 187.96 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 187.96 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "single-point bond: audio output return to module GND"
+			(at 187.96 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e611f0f6-b894-4b18-81aa-975b68cd864b")
+		)
+		(pin "2"
+			(uuid "7ed5bc90-99a8-417a-8b9e-b70c0291462b")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "NT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 119.888 138.43 0)
 		(unit 1)
@@ -4136,7 +5799,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "5ee1f7a5-3390-4af8-bb71-a8ffcf20f135")
 		(property "Reference" "R3"
 			(at 122.428 133.35 0)
@@ -4148,7 +5811,7 @@
 				)
 			)
 		)
-		(property "Value" "DNP"
+		(property "Value" "39k"
 			(at 122.428 143.51 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4169,7 +5832,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C137995.html"
 			(at 119.888 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -4312,7 +5975,7 @@
 				)
 			)
 		)
-		(property "Value" "0R"
+		(property "Value" "100k"
 			(at 108.966 146.05 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4333,7 +5996,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/b426be3ce22c6de3e0c3a2248e49159e.pdf?productCode=C60485"
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2304140030_YAGEO-RC0402FR-07100KL_C60491.pdf"
 			(at 106.426 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -4466,7 +6129,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 191.516 50.8 0)
+		(at 172.212 57.15 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4476,7 +6139,7 @@
 		(dnp no)
 		(uuid "8384bbcd-4193-43f0-909b-c5800f4c0c80")
 		(property "Reference" "C4"
-			(at 194.056 45.72 0)
+			(at 174.752 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4486,7 +6149,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 194.056 55.88 0)
+			(at 174.752 62.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4496,7 +6159,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 191.516 50.8 0)
+			(at 172.212 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4507,7 +6170,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/23ccee80ee542e7cf156a772bb589942.pdf?productCode=C131394"
-			(at 191.516 50.8 0)
+			(at 172.212 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4518,7 +6181,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 191.516 50.8 0)
+			(at 172.212 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4544,8 +6207,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 215.519 40.513 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8a76d40d-4670-4040-9146-07156f605261")
+		(property "Reference" "R5"
+			(at 222.519 43.053 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "39k"
+			(at 208.519 43.053 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 215.519 43.053 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C137995.html"
+			(at 215.519 43.053 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "output amp feedback"
+			(at 215.519 43.053 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cf65bb5a-dc63-439d-bc4f-77cc8998e892")
+		)
+		(pin "2"
+			(uuid "d96d1c3b-7464-49bb-9f11-e2698bd78166")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
-		(at 181.356 50.8 0)
+		(at 162.052 57.15 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4555,7 +6297,7 @@
 		(dnp no)
 		(uuid "8b787b0b-4bec-4239-82ec-ac7bd8a973d8")
 		(property "Reference" "C3"
-			(at 183.896 45.72 0)
+			(at 164.592 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4565,7 +6307,7 @@
 			)
 		)
 		(property "Value" "22uF 25V"
-			(at 183.896 55.88 0)
+			(at 164.592 62.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4575,7 +6317,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 181.356 50.8 0)
+			(at 162.052 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4586,7 +6328,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/e6bf9871bf3c14261c20e97c8b0fc691.pdf?productCode=C398931"
-			(at 181.356 50.8 0)
+			(at 162.052 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4597,7 +6339,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.356 50.8 0)
+			(at 162.052 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4717,6 +6459,182 @@
 		)
 	)
 	(symbol
+		(lib_id "Amplifier_Operational:TL072")
+		(at 249.682 119.38 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9143f4ba-7aba-4a61-9deb-01994c693434")
+		(property "Reference" "U2"
+			(at 252.222 112.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TL072"
+			(at 252.222 126.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 252.222 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C6961.html"
+			(at 252.222 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "spare half, terminated"
+			(at 252.222 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "ce644be4-e7ff-4c42-9526-e7d84892890a")
+		)
+		(pin "6"
+			(uuid "a1989475-974b-4ae9-8baf-5a6c495e5d3f")
+		)
+		(pin "7"
+			(uuid "ee05977c-af16-49f6-a9ba-7d1874d0f5ff")
+		)
+		(pin "1"
+			(uuid "36403f23-af84-47bd-9872-88486417daaf")
+		)
+		(pin "2"
+			(uuid "de161e69-b401-4d7c-8c18-dd3603e28daa")
+		)
+		(pin "3"
+			(uuid "daab98a1-3974-4efb-817b-23897163b285")
+		)
+		(pin "4"
+			(uuid "0313d0e4-5f92-4cf5-9e09-63aaa037c288")
+		)
+		(pin "8"
+			(uuid "c81cc0ff-a97a-4d29-a56a-78e671205364")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "U2")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:FerriteBead")
+		(at 261.62 46.99 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a075f1fc-e905-40c1-a3f3-e8e386fd139e")
+		(property "Reference" "FB2"
+			(at 268.62 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "600R@100MHz"
+			(at 254.62 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+			(at 261.62 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/faf431921010bd6151d84a7da591b5d1.pdf?productCode=C21519"
+			(at 261.62 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-12V rail bead"
+			(at 261.62 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b7cb074c-74ba-49b8-be66-9318a12b8f0f")
+		)
+		(pin "2"
+			(uuid "f85afbe5-d64c-4c6f-9fc5-4d968b0dd83a")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "FB2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Converter_DCDC:R-78E5.0-1.0")
 		(at 160.782 28.448 0)
 		(unit 1)
@@ -4799,8 +6717,342 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 255.016 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b8c31e7b-8077-4ceb-852c-033b933540c1")
+		(property "Reference" "D2"
+			(at 257.556 65.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SS34"
+			(at 257.556 79.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 257.556 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/dfa1ff67dea875d0135103ba9ada713a.pdf?productCode=C8678"
+			(at 257.556 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-12V reverse protection"
+			(at 257.556 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d803e438-7547-4c51-8493-8d33145b6ee9")
+		)
+		(pin "2"
+			(uuid "bc88cedb-c068-4759-963f-0fd08bdf2aef")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 215.773 31.115 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bc79d049-2753-442d-91da-20ffe677370c")
+		(property "Reference" "R7"
+			(at 222.773 33.655 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 208.773 33.655 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 215.773 33.655 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C60491.html"
+			(at 215.773 33.655 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "amp input bias return"
+			(at 215.773 33.655 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "34172ac3-c020-421d-a4c6-a16cacfe4438")
+		)
+		(pin "2"
+			(uuid "b62e3ed3-4a6d-4e7e-a0f2-956c9eea2580")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 215.265 50.165 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bf72c094-66a5-4a6f-bf46-3247603593fb")
+		(property "Reference" "R6"
+			(at 222.265 52.705 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 208.265 52.705 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 215.265 52.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C106235.html"
+			(at 215.265 52.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "output series / short protection"
+			(at 215.265 52.705 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bd3b131f-0b69-4ade-855e-96982dace486")
+		)
+		(pin "2"
+			(uuid "aef6203e-38f1-4ebb-9dc3-1a503c581883")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:TL072")
+		(at 210.566 154.178 270)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c6035cc5-d71c-48ff-9816-a45a417623b5")
+		(property "Reference" "U2"
+			(at 217.566 156.718 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TL072"
+			(at 203.566 156.718 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 210.566 156.718 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C6961.html"
+			(at 210.566 156.718 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "power"
+			(at 210.566 156.718 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "7385d678-3ca7-48ea-afa9-b50506372bfe")
+		)
+		(pin "8"
+			(uuid "ab09c93d-2117-490c-9e2d-9c52e1981608")
+		)
+		(pin "1"
+			(uuid "763fa817-e900-48b1-b487-276bc1a965e3")
+		)
+		(pin "2"
+			(uuid "e8c153c7-cd5b-4696-bcc2-252265949bd0")
+		)
+		(pin "3"
+			(uuid "2653d8d6-da36-4900-a4c2-1d5097b51689")
+		)
+		(pin "5"
+			(uuid "d6ab7ff0-4827-4f6a-a3bc-bae1dcfab441")
+		)
+		(pin "6"
+			(uuid "738a39a3-b6c6-48aa-956c-521164972171")
+		)
+		(pin "7"
+			(uuid "22fe17eb-a70d-4c2b-a03d-9f74badefdbc")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "U2")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
-		(at 255.27 99.568 0)
+		(at 258.572 149.352 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4810,7 +7062,7 @@
 		(dnp no)
 		(uuid "cca58875-f475-45db-b82c-942dd6d98014")
 		(property "Reference" "J10"
-			(at 257.81 94.488 0)
+			(at 261.112 144.272 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4820,7 +7072,7 @@
 			)
 		)
 		(property "Value" "display socket"
-			(at 255.524 107.95 0)
+			(at 258.826 157.734 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4830,7 +7082,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
-			(at 255.27 99.568 0)
+			(at 258.572 149.352 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4841,7 +7093,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/7912db05a9479e06d287e74aeb027dc2.pdf?productCode=C541851"
-			(at 255.27 99.568 0)
+			(at 258.572 149.352 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4852,7 +7104,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 255.27 99.568 0)
+			(at 258.572 149.352 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4878,6 +7130,85 @@
 			(project "eurorack"
 				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
 					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 215.773 68.961 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d67ad9e9-67ed-4578-bcb7-619a008efba2")
+		(property "Reference" "C6"
+			(at 222.773 71.501 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 208.773 71.501 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 215.773 71.501 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/23ccee80ee542e7cf156a772bb589942.pdf?productCode=C131394"
+			(at 215.773 71.501 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "U2 V- decoupling"
+			(at 215.773 71.501 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e324fba3-c82d-4fe7-8e0a-edf53c849652")
+		)
+		(pin "2"
+			(uuid "38273183-a9ba-4908-9c44-bfb8c0821ed9")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -5273,6 +7604,85 @@
 			(project "eurorack"
 				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
 					(reference "FB1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 252.095 59.309 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fb1a51b1-855e-48dc-aa84-10e50616c64f")
+		(property "Reference" "C5"
+			(at 259.095 61.849 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 245.095 61.849 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 252.095 61.849 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/23ccee80ee542e7cf156a772bb589942.pdf?productCode=C131394"
+			(at 252.095 61.849 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "U2 V+ decoupling"
+			(at 252.095 61.849 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1ec46732-1d9a-448e-8bdb-9456fb99b6af")
+		)
+		(pin "2"
+			(uuid "d56ac3da-8d89-449c-861e-92b9164b3d1f")
+		)
+		(instances
+			(project "eurorack"
+				(path "/10b6e37a-ba9e-4b9c-9a7d-f9ed8a459215"
+					(reference "C5")
 					(unit 1)
 				)
 			)
