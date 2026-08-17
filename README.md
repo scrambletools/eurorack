@@ -56,6 +56,8 @@ I/O, and a display socket, with no changes to either board.
   R2 to 0 Ω and leave R3 off — that restores the hat's native
   instrument-level path.
 
+![Synthia pinout](docs/synthia-pinout.png)
+
 ## Mezzanine crossover map
 
 J4 sits directly above J2, J5 above J3, all pin 1s oriented the same way.
@@ -64,13 +66,18 @@ the routing un-scrambles it:
 
 | This J2 (carrier row A) | net | → appears on | This J3 (carrier row B) | net | → appears on |
 |---|---|---|---|---|---|
-| 1 | ASDOUT | J5.7 | 1 | +5V | J4.7 |
-| 2 | LRCK | J5.6 | 2 | PASS_B2 | J4.6 |
+| 1 | SDA | J5.7 | 1 | +5V | J4.7 |
+| 2 | SCL | J5.6 | 2 | PASS_B2 | J4.6 |
 | 3 | GND | J5.5 | 3 | GND | J4.5 |
 | 4 | DSDIN | J5.4 | 4 | PASS_B4 | J4.4 |
 | 5 | BCLK | J5.3 | 5 | +3V3 | J4.3 |
-| 6 | MCLK | J5.2 | 6 | SCL | J4.2 |
-| 7 | DET | J5.1 | 7 | SDA | J4.1 |
+| 6 | LRCK | J5.2 | 6 | MCLK | J4.2 |
+| 7 | ASDOUT | J5.1 | 7 | DET | J4.1 |
+
+This follows the hat's 2026-08 mezzanine pinout revision (Pico-compatible;
+see the hat README). Carrier firmware pin constants: SDA = GPIO54,
+SCL = GPIO19, DSDIN = GPIO18, BCLK = GPIO17, LRCK = GPIO16,
+ASDOUT = GPIO15, MCLK = GPIO20, DET = GPIO21.
 
 PASS_B2/PASS_B4 are unused by the hat but bench-tracing identified them
 on the carrier: **PASS_B2 = the carrier's main 5 V rail** (downstream of
@@ -142,10 +149,12 @@ blocks a reversed ribbon from applying −12 V to the buck.
 
 ## Status
 
-**Schematic is ahead of the PCB**: the eurorack I/O stage (U2 amp, R4–R7,
-D2, FB2, C5–C7, NT1 — ten new footprints) needs placement and routing;
-regenerate fab/docs afterwards. Suggested placement: amp + rail parts in
-the pour pocket near the buck; NT1 adjacent to U2; keep the amp output
-run paired with AOUT_S to the jack. Before ordering: bench-verify the
-PJ-3410 pad map, and caliper-check the carrier's mezzanine row spacing
-against J2/J3 (designed 17.75 mm; the fit-proven hat uses 17.577 mm).
+The I/O stage is placed, routed and DRC-clean. **Schematic is ahead of
+the PCB on one item**: the hat's 2026-08 mezzanine pinout revision. The
+crossover copper is untouched (the runs just carry new net names after
+Update-PCB-from-Schematic), but the **J10 display SCL/SDA stubs must be
+re-routed** — I²C moved from the J3.6/J3.7 ↔ J4.2/J4.1 runs (now
+MCLK/DET) to the J2.2/J2.1 ↔ J5.6/J5.7 runs. Regenerate fab/docs
+afterwards. Before ordering: bench-verify the PJ-3410 pad map, and
+caliper-check the carrier's mezzanine row spacing against J2/J3
+(designed 17.75 mm; the fit-proven hat uses 17.577 mm).

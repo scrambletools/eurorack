@@ -2736,7 +2736,7 @@
 			)
 		)
 	)
-	(global_label "DET"
+	(global_label "ASDOUT"
 		(shape passive)
 		(at 208.534 93.98 180)
 		(effects
@@ -2909,7 +2909,7 @@
 			)
 		)
 	)
-	(global_label "LRCK"
+	(global_label "SCL"
 		(shape passive)
 		(at 75.946 96.52 180)
 		(effects
@@ -2931,7 +2931,7 @@
 			)
 		)
 	)
-	(global_label "SCL"
+	(global_label "MCLK"
 		(shape passive)
 		(at 176.276 96.52 180)
 		(effects
@@ -3019,7 +3019,7 @@
 			)
 		)
 	)
-	(global_label "ASDOUT"
+	(global_label "SDA"
 		(shape passive)
 		(at 75.946 93.98 180)
 		(effects
@@ -3215,7 +3215,7 @@
 			)
 		)
 	)
-	(global_label "LRCK"
+	(global_label "SCL"
 		(shape passive)
 		(at 208.534 106.68 180)
 		(effects
@@ -3259,7 +3259,7 @@
 			)
 		)
 	)
-	(global_label "DET"
+	(global_label "ASDOUT"
 		(shape passive)
 		(at 75.946 109.22 180)
 		(effects
@@ -3720,7 +3720,7 @@
 			)
 		)
 	)
-	(global_label "MCLK"
+	(global_label "LRCK"
 		(shape passive)
 		(at 208.534 96.52 180)
 		(effects
@@ -4066,7 +4066,7 @@
 			)
 		)
 	)
-	(global_label "MCLK"
+	(global_label "LRCK"
 		(shape passive)
 		(at 75.946 106.68 180)
 		(effects
@@ -4392,7 +4392,7 @@
 			)
 		)
 	)
-	(global_label "SCL"
+	(global_label "MCLK"
 		(shape passive)
 		(at 121.666 106.68 180)
 		(effects
@@ -4436,7 +4436,7 @@
 			)
 		)
 	)
-	(global_label "SDA"
+	(global_label "DET"
 		(shape passive)
 		(at 121.666 109.22 180)
 		(effects
@@ -4656,7 +4656,7 @@
 			)
 		)
 	)
-	(global_label "SDA"
+	(global_label "DET"
 		(shape passive)
 		(at 176.276 93.98 180)
 		(effects
@@ -4678,7 +4678,7 @@
 			)
 		)
 	)
-	(global_label "ASDOUT"
+	(global_label "SDA"
 		(shape passive)
 		(at 208.534 109.22 180)
 		(effects
