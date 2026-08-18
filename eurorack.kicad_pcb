@@ -2699,7 +2699,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr allow_missing_courtyard)
+		(attr allow_missing_courtyard exclude_from_pos_files)
 		(net_tie_pad_groups "1, 2")
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly

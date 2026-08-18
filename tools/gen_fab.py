@@ -129,7 +129,8 @@ def gen_cpl():
     excluded = []
     for fp in sorted(footprints(), key=sort_key):
         if ("dnp" in fp["attr"] or "exclude_from_pos_files" in fp["attr"]
-                or "through_hole" in fp["attr"]):
+                or "through_hole" in fp["attr"]
+                or "NetTie" in fp["name"]):   # net ties are copper, not parts
             excluded.append(fp["ref"]); continue
         base = fp["rot"] if fp["top"] else (180 - fp["rot"]) % 360
         rot = int(round((base + correction(fp["ref"], fp["name"])) % 360))
