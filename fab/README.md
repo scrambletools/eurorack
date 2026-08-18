@@ -5,18 +5,24 @@ Production files for **JLCPCB**. 2-layer board, ~84.7 × 30 mm.
 | File | Purpose |
 |---|---|
 | `eurorack-gerbers.zip` | **PCB fab** — gerbers + drills (upload this) |
-| `eurorack-BOM.csv` / `.xlsx` | **Assembly BOM** — the SMD parts only |
-| `eurorack-CPL.csv` | Placement file for the SMD parts |
+| `eurorack-BOM.csv` / `.xlsx` | **Assembly BOM** — every part (SMD + THT) |
+| `eurorack-CPL.csv` | Placement file — every assembled part |
 
-## Assembly split
+## Assembly
 
-- **JLCPCB SMT (optional):** `C1–C7`, `D1/D2`, `FB1/FB2`, `R2–R7`, `U2`,
-  `NT1` — 19 placements. If using assembly, **verify orientation of D1/D2
-  (SMA) and U2 (SOIC-8 pin 1) in the preview** — no validated rotation
-  corrections exist for this board.
-- **Hand-solder (all THT):** `J1` (power IDC), `J2/J3` (carrier sockets),
-  `J4/J5` (hat headers), `J6/J7` (panel jacks), `J8` (audio header),
-  `J10` (display socket), `U1` (K7805 buck module).
+**JLCPCB places everything** — 28 placements: the 18 SMD parts
+(`C1–C7`, `D1/D2`, `FB1/FB2`, `R2–R7`, `U2`) plus all through-hole
+(`J1` power IDC, `J2/J3` carrier sockets, `J4/J5` hat headers,
+`J6/J7` panel jacks, `J8`, `J10`, `U1` K7805 buck). Notes:
+
+- THT sits on **both sides** (top: J4/J5/J6/J7/J8/J10; bottom:
+  J1/J2/J3/U1) — expect JLC to quote the THT as hand-soldered on
+  their line at checkout.
+- **Verify orientation in the preview** — no validated rotation
+  corrections exist for this board: `D1/D2` (SMA cathode band),
+  `U2` (SOIC-8 pin 1), `J1` (shroud key toward the marked −12 V end),
+  `U1` (K7805 pin 1 = Vin), `J6/J7` (asymmetric jack pad pattern).
+- Excluded from assembly: `NT1` only (net tie — copper, not a part).
 - **DNP:** none. (R2/R3 = 100k/39k eurorack input pad; for guitar-level
   sources instead fit R2 = 0 Ω and omit R3 — see root README.)
 

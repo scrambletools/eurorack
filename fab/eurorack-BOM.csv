@@ -1,10 +1,17 @@
 Comment,Designator,Footprint,JLCPCB Part #（optional）
+Eurorack power header 2x5 shrouded IDC,J1,IDC box 2x5 P2.54mm,C5665
+5V/1A buck module (7805 drop-in),U1,"SIP-3 (TSR-1 land, P2.54)",C2992391
 Schottky reverse protection 40V 3A,"D1, D2",SMA (DO-214AC),C8678
 22uF 25V X5R,"C1, C3, C7",0805,C398931
 100nF 50V X7R,"C2, C4, C5, C6",0402,C131394
 Ferrite bead 600R@100MHz 2A,"FB1, FB2",0805,C21519
 100k 1%,"R2, R7",0402,C60491
 39k 1%,"R3, R5",0402,C137995
+1x7 female socket 8.5mm stack,"J2, J3",PinSocket 1x7 P2.54 TH,C2832270
+1x7 male header,"J4, J5",PinHeader 1x7 P2.54 TH,C492406
+1x4 male header,J8,PinHeader 1x4 P2.54 TH,C124378
+"3.5mm mono jack, horizontal, threaded","J6, J7","Vertical THT nose-up, M7.7x0.75 plastic thread",C5146694
+"1x4 female socket, 8.5mm",J10,PinSocket 1x4 P2.54 TH (H85),C541851
 10k 1%,R4,0402,C60490
 1k 1%,R6,0402,C106235
 Dual JFET op-amp,U2,SOIC-8,C6961

@@ -4,16 +4,17 @@
 Writes into fab/:
   - gerbers (F/B copper, masks, paste, silk, edge) + PTH/NPTH drills
   - eurorack-gerbers.zip                (upload this for PCB fab)
-  - eurorack-BOM.csv / .xlsx            (SMD assembled parts only, from BOM.csv)
-  - eurorack-CPL.csv                    (placement for the SMD parts)
+  - eurorack-BOM.csv / .xlsx            (all assembled parts, from BOM.csv)
+  - eurorack-CPL.csv                    (placement for all assembled parts)
 
-Assembly model: JLCPCB places the SMD parts only (C1-C4, D1, FB1, R2; R3 is
-DNP). Every through-hole part — all connectors, both jacks, and the K7805
-module — is hand-soldered, so THT parts are dropped from the assembly BOM
-and CPL automatically via their `through_hole` footprint attribute.
+Assembly model: JLCPCB places EVERYTHING — SMD and through-hole (all
+connectors, both jacks, and the K7805 module). Only DNP parts and NT1
+(net tie: copper, not a part) are dropped from the BOM/CPL.
 
-    Verify the polarized parts in JLCPCB's assembly preview — D1/D2 (SMA
-    diodes) and U2 (SOIC-8 pin 1) carry no validated rotation corrections.
+    Verify orientation-critical parts in JLCPCB's assembly preview —
+    no validated rotation corrections exist yet: D1/D2 (SMA cathode),
+    U2 (SOIC-8 pin 1), J1 (shrouded IDC key), U1 (K7805 pin 1),
+    J6/J7 (jack pad pattern is asymmetric).
 
 Usage:   python3 tools/gen_fab.py
 Needs:   kicad-cli on PATH; openpyxl for the .xlsx BOM (optional).
@@ -66,7 +67,7 @@ def gen_bom():
     for r in rows[1:]:
         if len(r) < 10:
             continue
-        if r[9].strip().upper() == "DNP" or r[8].strip().upper() in ("TH", "THT"):
+        if r[9].strip().upper() == "DNP":
             continue
         out.append([r[0], r[1], r[5], r[6]])
     with open(os.path.join(FAB, f"{BOARD}-BOM.csv"), "w", newline="") as f:
@@ -129,7 +130,6 @@ def gen_cpl():
     excluded = []
     for fp in sorted(footprints(), key=sort_key):
         if ("dnp" in fp["attr"] or "exclude_from_pos_files" in fp["attr"]
-                or "through_hole" in fp["attr"]
                 or "NetTie" in fp["name"]):   # net ties are copper, not parts
             excluded.append(fp["ref"]); continue
         base = fp["rot"] if fp["top"] else (180 - fp["rot"]) % 360
@@ -138,8 +138,8 @@ def gen_cpl():
                     "Top" if fp["top"] else "Bottom", rot])
     with open(os.path.join(FAB, f"{BOARD}-CPL.csv"), "w", newline="") as f:
         csv.writer(f, lineterminator="\r\n").writerows(out)
-    print(f"  {BOARD}-CPL.csv  ({len(out)-1} placed; excluded DNP/THT {sorted(excluded)})")
-    print("  no validated rotation corrections -> verify D1/D2 (SMA) and U2 (SOIC-8) in the preview")
+    print(f"  {BOARD}-CPL.csv  ({len(out)-1} placed; excluded {sorted(excluded)})")
+    print("  no validated rotation corrections -> verify D1/D2, U2, J1, U1, J6/J7 in the preview")
 
 
 if __name__ == "__main__":
@@ -147,4 +147,4 @@ if __name__ == "__main__":
     gen_gerbers()
     gen_bom()
     gen_cpl()
-    print("Done. Upload gerbers.zip (+ BOM/CPL if using JLC assembly for the SMD parts).")
+    print("Done. Upload gerbers.zip + BOM + CPL to JLCPCB (full assembly).")
